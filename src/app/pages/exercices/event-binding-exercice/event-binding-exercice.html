@@ -1,0 +1,8 @@
+<p>event-binding-exercice works!</p>
+<div class="card">
+    <label for="">Password</label>
+    <input class="input" type="password" (keyup)="onKeyUp($event)">
+    <p>Votre mot de passe est :{{ password }}</p>
+    <p>{{ listFriendsCreationStatus }}</p>
+    <button class="btn btn-primary" [disabled]="btnDisable()" (click)='listFriendsCreationStatus = "Votre ami a été ajouté"'> + Ajouter un ami</button>
+</div>

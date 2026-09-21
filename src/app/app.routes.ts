@@ -27,6 +27,10 @@ export const routes: Routes = [
         loadComponent:() => import('./pages/attribute-binding/attribute-binding').then(m=>m.AttributeBinding)
     },
     {
+        path:'eventBinding',
+        loadComponent:() => import('./pages/exercices/event-binding-exercice/event-binding-exercice').then(m=>m.EventBindingExercice)
+    },
+    {
         path:'**',
         loadComponent:() => import('./pages/not-found/not-found').then(m=>m.NotFound)
     },
