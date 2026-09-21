@@ -1,0 +1,23 @@
+<p>text-interpolation works!</p>
+<div class="aura text-orange-600 duration-1100">
+    <div class="card bg-base-100 w-96 shadow-sm aura aura-rainbow text-base-content ">
+        <div class="card-body">
+            <h2 class="card-title">Types Primitif</h2>
+            <p>Note maximale : {{ note }} / 20 </p>
+            <p>Pourcentage: {{ pourcentage }} %</p>
+        </div>
+        <div>
+            <div class="card-body aura aura-gold ">
+                <h2 class="card-title">Objet et Méthode</h2>
+                <p>Rôle : {{ user.role }}</p>
+                <p>Nom complet : {{ user.name }}</p>
+                <p>Statut : <span class="badge badge-error" >{{ user.status }} </span></p>
+            </div>
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">Les tableaux</h2>
+            <p>Première compétence : {{ tab[0]}}</p>
+            <p> Toute les compétences : {{ tab.join('+')}}</p>
+        </div>
+    </div>
+</div>

@@ -3,6 +3,11 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path:'',
+        pathMatch:'full',
+        redirectTo:'home'
+    },
+    {
+        path:'home',
         loadComponent:() => import('./pages/home/home').then(m=>m.Home)
     },
     {
@@ -10,12 +15,16 @@ export const routes: Routes = [
         loadComponent:() => import('./pages/about/about').then(m=>m.About)
     },
     {
-        path:'home',
-        loadComponent:() => import('./pages/home/home').then(m=>m.Home)
-    },
-    {
         path:'contact',
         loadComponent:() => import('./pages/contact/contact').then(m=>m.Contact)
+    },
+    {
+        path:'textInterpolation',
+        loadComponent:() => import('./pages/text-interpolation/text-interpolation').then(m=>m.TextInterpolation)
+    },
+    {
+        path:'attributeBinding',
+        loadComponent:() => import('./pages/attribute-binding/attribute-binding').then(m=>m.AttributeBinding)
     },
     {
         path:'**',

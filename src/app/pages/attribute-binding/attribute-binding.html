@@ -1,0 +1,15 @@
+<p>attribute-binding works!</p>
+
+<div class="card bg-base-100 w-96 shadow-sm">
+  <figure>
+    <img [src] = user.image alt="{{user.name}}">
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">User</h2>
+    <p> prenom : {{user.name}}</p>
+    <p> age : {{user.age}}</p>
+    <p> bio :{{user.bio}}</p>
+    <p> Réputation : {{user.status == 'online' ? 'cool' : 'pascool'}} </p>
+    
+  </div>
+</div>
