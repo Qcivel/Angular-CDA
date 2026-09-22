@@ -1,0 +1,13 @@
+<p>component-communication works!</p>
+
+<app-active-user
+[nameUser]="name"
+[ageUser]="age"
+
+></app-active-user>
+
+<app-user-data
+(myEmit)="myEmitTest($event)"
+></app-user-data>
+
+

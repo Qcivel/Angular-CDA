@@ -1,6 +1,6 @@
 <p>directives works!</p>
 <div>
-    <button class="btn btn-primary" (click)="colorChange()" (click)="nbrCount()" >Masquer Détails</button>
+    <button class="btn btn-primary" (click)="colorChange(); nbrCount()">Masquer Détails</button>
     @if ( onClick ){
         <p [ngStyle]="{'color': textColor}">Six-Seven</p>
     }

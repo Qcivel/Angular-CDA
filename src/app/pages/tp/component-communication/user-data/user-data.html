@@ -1,0 +1,8 @@
+<p>user-data works!</p>
+<form (ngSubmit)="parent()">
+    <label for="">Votre nom :</label>
+    <input type="text" name="name" [(ngModel)]="name"  >
+    <label for="">Votre age :</label>
+    <input type="number" name="age" [(ngModel)] = "age">
+    <button class="btn" type="submit">MAJ</button>
+</form>

@@ -35,6 +35,10 @@ export const routes: Routes = [
         loadComponent:() => import('./pages/tp/directives/directives').then(m=>m.Directives)
     },
     {
+        path:'componentCommunication',
+        loadComponent:() => import('./pages/tp/component-communication/component-communication').then(m=>m.ComponentCommunication)
+    },
+    {
         path:'**',
         loadComponent:() => import('./pages/not-found/not-found').then(m=>m.NotFound)
     },
