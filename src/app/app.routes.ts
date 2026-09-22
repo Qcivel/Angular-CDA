@@ -31,6 +31,10 @@ export const routes: Routes = [
         loadComponent:() => import('./pages/exercices/event-binding-exercice/event-binding-exercice').then(m=>m.EventBindingExercice)
     },
     {
+        path:'directives',
+        loadComponent:() => import('./pages/tp/directives/directives').then(m=>m.Directives)
+    },
+    {
         path:'**',
         loadComponent:() => import('./pages/not-found/not-found').then(m=>m.NotFound)
     },

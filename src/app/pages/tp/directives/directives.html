@@ -1,0 +1,13 @@
+<p>directives works!</p>
+<div>
+    <button class="btn btn-primary"  (click)="nbrCount()" >Masquer Détails</button>
+    @if ( onClick ){
+        <p>Six-Seven</p>
+    }
+    @for (item of tab; track $index) {
+        <p [ngClass]="{'aura aura-gold': item >= 6}">{{ tab[$index] }}</p>
+    }
+    
+</div>
+
+
