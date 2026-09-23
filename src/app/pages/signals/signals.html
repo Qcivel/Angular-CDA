@@ -1,0 +1,44 @@
+<div>
+    <div class="card">
+        <h1>Configuration de la commande</h1>
+        <div>
+            <button (click)="decrement()" class="btn btn-outline btn-primary"> - </button>
+            <p> {{ quantity()}}</p>
+            <button (click)="increment()" class="btn btn-outline btn-secondary"> + </button>
+        </div>
+        <div>
+            <h2>Code Promo :</h2>
+            <fieldset>
+                <legend>Sélectionnez une promo&nbsp;:</legend>
+
+                <div>
+                    <input type="radio" id="aucune" name="promo" value="aucune" checked />
+                    <label for="aucune">Aucune</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="dix" name="promo" value="dix" />
+                    <label for="dix">-10%</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="vingt" name="promo" value="vingt" />
+                    <label for="vingt">-20%</label>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="card">
+        <div>
+            <h2>Synthèse de la commande</h2>
+            <p>Sous-total brut {{ unitPrice()}}</p>
+            <p>Remise </p>
+            <p>Frais de port {{ shippingFee() }}</p>
+        </div>
+        <div>
+            <p>Total à payer </p>
+            <p>{{ subtotal()}}</p>
+        </div>
+        <button class="btn btn-primary"> Commander {{ quantity()}} article</button>
+    </div>
+</div>

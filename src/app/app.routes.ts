@@ -39,6 +39,19 @@ export const routes: Routes = [
         loadComponent:() => import('./pages/tp/component-communication/component-communication').then(m=>m.ComponentCommunication)
     },
     {
+        path:'randomUser',
+        loadComponent:() => import('./pages/api/random-user/random-user').then(m=>m.HttpApi)
+    },
+    {
+        path:'observables',
+        loadComponent:() => import('./pages/observables/observables').then(m=>m.Observables)
+    },
+    {
+        path:'signals',
+        loadComponent:() => import('./pages/signals/signals').then(m=>m.Signals)
+    },
+    
+    {
         path:'**',
         loadComponent:() => import('./pages/not-found/not-found').then(m=>m.NotFound)
     },

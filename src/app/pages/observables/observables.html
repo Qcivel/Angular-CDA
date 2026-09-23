@@ -1,0 +1,18 @@
+<div>
+    <h1 class="card-title">Générateur Simplifié de Nombres Aléatoires</h1>
+    <div>
+        <button (click)="start()" class="btn btn-success">Démarer</button>
+        <button (click)="pauseResume()" class="btn btn-warning">{{ paused() ? 'Reprendre' : 'Pause'}}</button>
+        <button (click)="stop()" class="btn btn-error">Arrêter</button>
+    </div>
+    <div>
+        <h2 class="card-title">Nombres générés</h2>
+    </div>
+    @if(numbers().length == 0){
+        <p> Aucun nombre générés ! </p>
+    }
+        @for (item of numbers(); track $index) {
+            <p>{{ item }}</p>
+        }
+    
+</div>

@@ -1,0 +1,18 @@
+
+@if(newData()){
+    <div class="card bg-base-100 w-96 shadow-sm">
+    <figure>
+        <img [ngSrc]= "newData().results[0].picture.large " width="128" height="128"
+        alt="Shoes" />
+    </figure>
+    <div class="card-body">
+        <h2 class="card-title">Profil Utilisateur</h2>
+        <p>{{newData().results[0].name.first }} {{newData().results[0].name.last }}</p>
+        <p>Nom :{{newData().results[0].email}} </p>
+        <p>Email :{{newData().results[0].email}} </p>
+        <p>Téléphone :{{newData().results[0].phone}} </p>
+        <p> Localistation :{{newData().results[0].location.city}} </p>
+        
+    </div>
+    </div>
+}
