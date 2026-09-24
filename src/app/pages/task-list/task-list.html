@@ -1,0 +1,64 @@
+<div class="p-6 mx-auto max-w-xl">
+      <h2 class="text-3xl font-bold text-center text-primary mb-6">
+        Liste des tâches
+      </h2>
+
+      <!-- Formulaire d'ajout -->
+      <form (ngSubmit)="/* TODO: Appeler la méthode d'ajout */" class="flex gap-3 mb-8">
+        <input
+          [(ngModel)]="newTaskTitle"
+          name="taskTitle"
+          type="text"
+          placeholder="Nouvelle tâche"
+          class="input input-bordered w-full"
+        />
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="/* TODO: Désactiver si le champ est vide */"
+        >
+          Ajouter
+        </button>
+      </form>
+
+      <!-- Liste des tâches avec @for et @empty -->
+      <ul class="space-y-3">
+        @for (task of /* TODO: Lire la valeur du signal tasks */; track task.id) {
+          <li class="bg-base-100 shadow-lg p-4 rounded-lg">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+              <span class="text-lg font-medium grow">
+                {{ task.title }}
+              </span>
+
+              <!-- Dynamic class binding selon le statut -->
+              <span
+                class="badge badge-lg font-semibold"
+                [class.badge-success]="task.status === 'completed'"
+                [class.badge-warning]="task.status === 'pending'"
+              >
+                {{ task.status }}
+              </span>
+
+              <div class="flex gap-2">
+                <button
+                  class="btn btn-info btn-sm"
+                  (click)="/* TODO: Appeler toggleStatus */"
+                >
+                  Statut
+                </button>
+                <button
+                  class="btn btn-error btn-sm"
+                  (click)="/* TODO: Appeler deleteTask avec l'id */"
+                >
+                  Supprimer
+                </button>
+              </div>
+            </div>
+          </li>
+        } @empty {
+          <div class="text-center text-neutral-content opacity-70 mt-8">
+            Aucune tâche dans la liste. Ajoutez-en une !
+          </div>
+        }
+      </ul>
+    </div>

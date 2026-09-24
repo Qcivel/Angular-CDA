@@ -10,19 +10,16 @@
             <h2>Code Promo :</h2>
             <fieldset>
                 <legend>Sélectionnez une promo&nbsp;:</legend>
-
                 <div>
-                    <input type="radio" id="aucune" name="promo" value="aucune" checked />
+                    <input (click)="solde(0)" type="radio" id="aucune" name="promo" value="aucune" checked />
                     <label for="aucune">Aucune</label>
                 </div>
-
                 <div>
-                    <input type="radio" id="dix" name="promo" value="dix" />
+                    <input (click)="solde(10)" type="radio" id="dix" name="promo" value="dix" />
                     <label for="dix">-10%</label>
                 </div>
-
                 <div>
-                    <input type="radio" id="vingt" name="promo" value="vingt" />
+                    <input (click)="solde(20)" type="radio" id="vingt" name="promo" value="vingt" />
                     <label for="vingt">-20%</label>
                 </div>
             </fieldset>
@@ -37,7 +34,7 @@
         </div>
         <div>
             <p>Total à payer </p>
-            <p>{{ subtotal()}}</p>
+            <p>{{ total() }}</p>
         </div>
         <button class="btn btn-primary"> Commander {{ quantity()}} article</button>
     </div>

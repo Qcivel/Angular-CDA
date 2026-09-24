@@ -19,7 +19,7 @@ export class Signals {
   });
 
   discountAmount = computed(()=>{
-    return this.discountCode()/100;
+    return this.subtotal() * (this.discountCode() / 100);
   });
 
   shippingFee = computed(()=>{
@@ -30,9 +30,17 @@ export class Signals {
     }else if(this.subtotal() >= 100){
       return 0
     }else{
-      return 0
+      return 5
     }
   });
+
+  solde(pourcentage: number){
+    this.discountCode.set(pourcentage);
+  }
+  
+  total = computed(()=>{
+    return this.subtotal() - this.discountAmount() + this.shippingFee();
+  })
 
   increment(){
     this.quantity.update(value => value + 1 );

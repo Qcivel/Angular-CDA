@@ -50,6 +50,14 @@ export const routes: Routes = [
         path:'signals',
         loadComponent:() => import('./pages/signals/signals').then(m=>m.Signals)
     },
+    {
+        path:'validationForm',
+        loadComponent:() => import('./pages/validation-form/validation-form').then(m=>m.ValidationForm)
+    },
+    {
+        path:'taskList',
+        loadComponent:() => import('./pages/task-list/task-list').then(m=>m.TaskList)
+    },
     
     {
         path:'**',
